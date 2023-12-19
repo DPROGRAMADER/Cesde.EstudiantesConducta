@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34322.80
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cesde.EstudiantesConducta.API", "Cesde.EstudiantesConducta.API\Cesde.EstudiantesConducta.API.csproj", "{8DDC7068-DEC9-4516-9CF8-78BC3226F54D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{60F18B12-5B5D-435D-9E58-69467D621095}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{C7DCBB0F-E225-42C9-9833-001018864D07}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{D4CAB4DE-CFA2-49B2-BBAF-3106F86CEB84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CESDE.ConductaEstudiante.Application", "CESDE.ConductaEstudiante.Application\CESDE.ConductaEstudiante.Application.csproj", "{425C158F-FC9B-4279-9D82-8417078B71F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CESDE.ConductaEstudiante.Domain", "CESDE.ConductaEstudiante.Domain\CESDE.ConductaEstudiante.Domain.csproj", "{1631938F-23E1-4DEF-A927-DA396BB10006}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CESDE.ConductaEstudiante.Infrastructure", "CESDE.ConductaEstudiante.Infrastructure\CESDE.ConductaEstudiante.Infrastructure.csproj", "{96BBB7C2-01F1-4DBC-B245-CFBA7CB53E1F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8DDC7068-DEC9-4516-9CF8-78BC3226F54D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DDC7068-DEC9-4516-9CF8-78BC3226F54D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DDC7068-DEC9-4516-9CF8-78BC3226F54D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DDC7068-DEC9-4516-9CF8-78BC3226F54D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{425C158F-FC9B-4279-9D82-8417078B71F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{425C158F-FC9B-4279-9D82-8417078B71F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{425C158F-FC9B-4279-9D82-8417078B71F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{425C158F-FC9B-4279-9D82-8417078B71F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1631938F-23E1-4DEF-A927-DA396BB10006}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1631938F-23E1-4DEF-A927-DA396BB10006}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1631938F-23E1-4DEF-A927-DA396BB10006}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1631938F-23E1-4DEF-A927-DA396BB10006}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96BBB7C2-01F1-4DBC-B245-CFBA7CB53E1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96BBB7C2-01F1-4DBC-B245-CFBA7CB53E1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96BBB7C2-01F1-4DBC-B245-CFBA7CB53E1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96BBB7C2-01F1-4DBC-B245-CFBA7CB53E1F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8DDC7068-DEC9-4516-9CF8-78BC3226F54D} = {C7DCBB0F-E225-42C9-9833-001018864D07}
+		{425C158F-FC9B-4279-9D82-8417078B71F4} = {60F18B12-5B5D-435D-9E58-69467D621095}
+		{1631938F-23E1-4DEF-A927-DA396BB10006} = {60F18B12-5B5D-435D-9E58-69467D621095}
+		{96BBB7C2-01F1-4DBC-B245-CFBA7CB53E1F} = {D4CAB4DE-CFA2-49B2-BBAF-3106F86CEB84}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E12DE903-B6F1-4561-8D4F-9F2EEC91C649}
+	EndGlobalSection
+EndGlobal
