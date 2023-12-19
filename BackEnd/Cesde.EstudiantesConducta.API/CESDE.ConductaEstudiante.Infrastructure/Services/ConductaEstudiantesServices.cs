@@ -14,7 +14,7 @@ namespace CESDE.ConductaEstudiante.Infrastructure.Services
 
             services.AddDbContext<RegistroConductaEstudiantesContext>(options =>
             {
-                options.UseSqlServer(configuration.GetConnectionString("Estudiante"));
+                options.UseSqlServer(configuration.GetConnectionString("RegistroConductaEstudiantes"));
             });
 
             services.AddScoped<IApplicationDbcontexts, RegistroConductaEstudiantesContext>();

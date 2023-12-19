@@ -11,10 +11,10 @@ namespace CESDE.ConductaEstudiante.Application.Mappings.ConductaEstudianteM
 
         public ConductaEstudianteMapping() 
         {
-            CreateMap<Estudiante, ConductaEstudianteDto>();
-            CreateMap<CrearConductaEstudianteCommand, Estudiante>();
-            CreateMap<EditarConductaEstudianteCommand, Estudiante>();
-            CreateMap<EliminarConductaEstudiante, Estudiante>();
+            CreateMap<ConductaEstudiantes, ConductaEstudianteDto>();
+            CreateMap<CrearConductaEstudianteCommand, ConductaEstudiantes>();
+            CreateMap<EditarConductaEstudianteCommand, ConductaEstudiantes>();
+            CreateMap<EliminarConductaEstudiante, ConductaEstudiantes>();
 
         }
 

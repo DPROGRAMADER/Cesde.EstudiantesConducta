@@ -26,16 +26,16 @@ namespace CESDE.ConductaEstudiante.Application.Queries.ConductaEstudianteQ
         {
             _logger.LogInformation("ConductaEstudianteQueryHanlder started");
 
-            var estudiantes = await _contexts.Estudiantes.Select(x => new ConductaEstudianteDto()
+            var estudiantes = await _contexts.ConductaEstudiantes.Select(x => new ConductaEstudianteDto()
             {
-                IdEstudiante = x.IdEstudiante,
+                Id = x.Id,
                 PrimerNombre = x.PrimerNombre,
                 SegundoNombre = x.SegundoNombre,
                 PrimerApellido = x.PrimerApellido,
                 SegundoApellido = x.SegundoApellido,
                 ProgramaAcademico = x.ProgramaAcademico,
-                Observacion =x.Observacion,
-                Fecha = x.Fecha,
+                Observaciones = x.Observaciones,
+                FechaNovedad = x.FechaNovedad,
 
             }).ToListAsync(cancellationToken);
 

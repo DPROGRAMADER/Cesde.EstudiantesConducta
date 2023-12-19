@@ -2,7 +2,6 @@
 using CESDE.ConductaEstudiante.Application.Queries.ConductaEstudianteQ;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace Cesde.EstudiantesConducta.API.Controllers.EstudianteC
 {
@@ -63,14 +62,14 @@ namespace Cesde.EstudiantesConducta.API.Controllers.EstudianteC
 
 
         [HttpDelete]
-        [Route("EliminarConductaEstudiante/{IdEstudiante}")]
+        [Route("EliminarConductaEstudiante/{Id}")]
 
-        public async Task<IActionResult> EliminarConductaEstudiante(int IdEstudiante)
+        public async Task<IActionResult> EliminarConductaEstudiante(int Id)
         {
 
             try
             {
-                var result = await _mediator.Send(new EliminarConductaEstudiante { IdEstudiante = IdEstudiante });
+                var result = await _mediator.Send(new EliminarConductaEstudiante { Id = Id });
 
                 if (result == null)
                 {

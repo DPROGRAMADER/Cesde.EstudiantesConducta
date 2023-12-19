@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CESDE.ConductaEstudiante.Application\CESDE.ConductaEstudiante.Application.csproj" />
+    <ProjectReference Include="..\CESDE.ConductaEstudiante.Domain\CESDE.ConductaEstudiante.Domain.csproj" />
   </ItemGroup>
 
 </Project>

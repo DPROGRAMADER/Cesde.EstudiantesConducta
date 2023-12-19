@@ -1,15 +1,15 @@
-﻿namespace CESDE.ConductaEstudiante.Infrastructure.Models
+﻿namespace CESDE.ConductaEstudiante.Domain.Entities
 {
-    public partial class Estudiante
+    public class ConductaEstudiantes
     {
+        public int Id { get; set; }
+        public string Documento { get; set; } = null!;
         public string PrimerNombre { get; set; } = null!;
         public string? SegundoNombre { get; set; }
         public string PrimerApellido { get; set; } = null!;
         public string? SegundoApellido { get; set; }
         public string ProgramaAcademico { get; set; } = null!;
-        public string? Novedad { get; set; }
-        public string? Observacion { get; set; }
-        public DateTime? Fecha { get; set; }
-        public int IdEstudiante { get; set; }
+        public DateTime FechaNovedad { get; set; }
+        public string? Observaciones { get; set; }
     }
 }

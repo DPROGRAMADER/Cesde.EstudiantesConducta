@@ -16,7 +16,7 @@ namespace CESDE.ConductaEstudiante.Infrastructure.Models
         {
         }
 
-        public virtual DbSet<Estudiante> Estudiantes { get; set; } = null!;
+        public virtual DbSet<ConductaEstudiante> ConductaEstudiantes { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -29,42 +29,49 @@ namespace CESDE.ConductaEstudiante.Infrastructure.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Estudiante>(entity =>
+            modelBuilder.Entity<ConductaEstudiante>(entity =>
             {
-                entity.HasKey(e => e.IdEstudiante)
-                    .HasName("PK__Estudian__AEFFDBC52C0D41B6");
+                entity.ToTable("ConductaEstudiante");
 
-                entity.ToTable("Estudiante");
+                entity.Property(e => e.Id).HasColumnName("id");
 
-                entity.Property(e => e.IdEstudiante).HasColumnName("idEstudiante");
-
-                entity.Property(e => e.Fecha).HasColumnType("date");
-
-                entity.Property(e => e.Novedad)
+                entity.Property(e => e.Documento)
                     .HasMaxLength(255)
-                    .IsUnicode(false);
+                    .IsUnicode(false)
+                    .HasColumnName("documento");
 
-                entity.Property(e => e.Observacion).HasColumnType("text");
+                entity.Property(e => e.FechaNovedad)
+                    .HasColumnType("date")
+                    .HasColumnName("fecha_novedad");
+
+                entity.Property(e => e.Observaciones)
+                    .HasColumnType("text")
+                    .HasColumnName("observaciones");
 
                 entity.Property(e => e.PrimerApellido)
                     .HasMaxLength(50)
-                    .IsUnicode(false);
+                    .IsUnicode(false)
+                    .HasColumnName("primer_apellido");
 
                 entity.Property(e => e.PrimerNombre)
                     .HasMaxLength(50)
-                    .IsUnicode(false);
+                    .IsUnicode(false)
+                    .HasColumnName("primer_nombre");
 
                 entity.Property(e => e.ProgramaAcademico)
                     .HasMaxLength(100)
-                    .IsUnicode(false);
+                    .IsUnicode(false)
+                    .HasColumnName("programa_academico");
 
                 entity.Property(e => e.SegundoApellido)
                     .HasMaxLength(50)
-                    .IsUnicode(false);
+                    .IsUnicode(false)
+                    .HasColumnName("segundo_apellido");
 
                 entity.Property(e => e.SegundoNombre)
                     .HasMaxLength(50)
-                    .IsUnicode(false);
+                    .IsUnicode(false)
+                    .HasColumnName("segundo_nombre");
             });
 
             OnModelCreatingPartial(modelBuilder);

@@ -1,6 +1,9 @@
-﻿namespace CESDE.ConductaEstudiante.Application.Dtos.ConductaEstudiante
+﻿using System;
+using System.Collections.Generic;
+
+namespace CESDE.ConductaEstudiante.Infrastructure.Models
 {
-    public class ConductaEstudianteDto
+    public partial class ConductaEstudiante
     {
         public int Id { get; set; }
         public string Documento { get; set; } = null!;
@@ -12,6 +15,4 @@
         public DateTime FechaNovedad { get; set; }
         public string? Observaciones { get; set; }
     }
-
 }
-

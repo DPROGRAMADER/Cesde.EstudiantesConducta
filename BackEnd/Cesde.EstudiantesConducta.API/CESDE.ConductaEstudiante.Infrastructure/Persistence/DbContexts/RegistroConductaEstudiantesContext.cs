@@ -2,13 +2,16 @@
 using CESDE.ConductaEstudiante.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using System.Reflection;
 
 namespace CESDE.ConductaEstudiante.Infrastructure.Persistence.DbContexts
 {
     public partial class RegistroConductaEstudiantesContext : DbContext, IApplicationDbcontexts
     {
 
-        public virtual DbSet<Estudiante> Estudiantes { get; set; }
+        public virtual DbSet<ConductaEstudiantes> ConductaEstudiantes { get; set; }
+
+        public DatabaseFacade DatabaseFacade => throw new NotImplementedException();
 
         public RegistroConductaEstudiantesContext()
         {
@@ -19,9 +22,13 @@ namespace CESDE.ConductaEstudiante.Infrastructure.Persistence.DbContexts
         {
         }
 
-        public DatabaseFacade DatabaseFacade => throw new NotImplementedException();
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 
-        Microsoft.EntityFrameworkCore.DbSet<Estudiante> IApplicationDbcontexts.Estudiantes
-        { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+            OnModelCreatingPartial(modelBuilder);
+        }
+
+        partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
 }

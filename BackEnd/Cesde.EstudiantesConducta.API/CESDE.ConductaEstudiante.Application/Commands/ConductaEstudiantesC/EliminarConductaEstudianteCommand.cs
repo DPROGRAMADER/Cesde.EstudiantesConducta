@@ -8,7 +8,7 @@ namespace CESDE.ConductaEstudiante.Application.Commands.ConductaEstudiantesC
 {
     public class EliminarConductaEstudiante : IRequest<bool>
     {
-        public int IdEstudiante { get; set; }
+        public int Id { get; set; }
 
     }
 
@@ -28,14 +28,14 @@ namespace CESDE.ConductaEstudiante.Application.Commands.ConductaEstudiantesC
         {
             _logger.LogDebug("EliminarConductaEstudianteHanlder started");
 
-            var estudiante = await _context.Estudiantes.FirstOrDefaultAsync(x => x.IdEstudiante == request.IdEstudiante);
+            var ConductaEstudiante = await _context.ConductaEstudiantes.FirstOrDefaultAsync(x => x.Id == request.Id);
 
-            if (estudiante == null)
+            if (ConductaEstudiante == null)
             {
                 _logger.LogInformation(" Conducta no encontrada ");
 
             }
-            _context.Estudiantes.Remove(estudiante);
+            _context.ConductaEstudiantes.Remove(ConductaEstudiante);
 
             await _context.SaveChangesAsync(cancellationToken);
 

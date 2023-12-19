@@ -6,7 +6,7 @@ namespace CESDE.ConductaEstudiante.Application.Interfaces
 {
     public interface IApplicationDbcontexts
     {
-        DbSet<Estudiante> Estudiantes { get; set; }
+        DbSet<ConductaEstudiantes> ConductaEstudiantes { get; set; } 
 
         Task<int> SaveChangesAsync(CancellationToken cancellationToken);
 
