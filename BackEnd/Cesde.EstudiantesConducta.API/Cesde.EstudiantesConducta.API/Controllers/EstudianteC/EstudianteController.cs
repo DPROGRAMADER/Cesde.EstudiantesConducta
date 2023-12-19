@@ -19,9 +19,9 @@ namespace Cesde.EstudiantesConducta.API.Controllers.EstudianteC
         }
 
         [HttpPost]
-        [Route("CrearConductaEstudianteCommand")]
+        [Route("CrearConductaEstudiante")]
 
-        public async Task<IActionResult> CrearConductaEstudianteCommand(CrearConductaEstudianteCommandHanlder command)
+        public async Task<IActionResult> CrearConductaEstudiante(CrearConductaEstudianteCommand command)
         {
             try
             {
@@ -40,9 +40,9 @@ namespace Cesde.EstudiantesConducta.API.Controllers.EstudianteC
         }
 
         [HttpPut]
-        [Route("EditarConductaEstudianteCommand")]
+        [Route("EditarConductaEstudiante")]
 
-        public async Task<IActionResult> EditarConductaEstudianteCommand(EditarConductaEstudianteCommandHanlder command)
+        public async Task<IActionResult> EditarConductaEstudiante(EditarConductaEstudianteCommand command)
         {
             try
             {
