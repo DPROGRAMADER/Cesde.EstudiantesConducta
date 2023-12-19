@@ -34,6 +34,8 @@ namespace CESDE.ConductaEstudiante.Application.Queries.ConductaEstudianteQ
                 PrimerApellido = x.PrimerApellido,
                 SegundoApellido = x.SegundoApellido,
                 ProgramaAcademico = x.ProgramaAcademico,
+                Observacion =x.Observacion,
+                Fecha = x.Fecha,
 
             }).ToListAsync(cancellationToken);
 

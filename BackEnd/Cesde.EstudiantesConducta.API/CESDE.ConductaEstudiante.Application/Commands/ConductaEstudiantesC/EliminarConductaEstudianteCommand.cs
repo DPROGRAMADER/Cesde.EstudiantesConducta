@@ -1,4 +1,5 @@
 ﻿using CESDE.ConductaEstudiante.Application.Interfaces;
+using CESDE.ConductaEstudiante.Domain.Entities;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
