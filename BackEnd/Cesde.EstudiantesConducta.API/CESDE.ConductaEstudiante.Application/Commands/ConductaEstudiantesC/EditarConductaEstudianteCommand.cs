@@ -24,13 +24,21 @@ namespace CESDE.ConductaEstudiante.Application.Commands.ConductaEstudiantesC
 
 }
 
-    public class EditarConductaEstudianteCommandHanlder : IRequestHandler<CrearConductaEstudianteCommand, ConductaEstudianteDto>
+    public class EditarConductaEstudianteCommandHanlder : IRequestHandler<EditarConductaEstudianteCommand, ConductaEstudianteDto>
     {
         private readonly IApplicationDbcontexts _context;
         private readonly ILogger<EditarConductaEstudianteCommandHanlder> _logger;
         private readonly IMapper _mapper;
 
-        public async Task<ConductaEstudianteDto> Handle(CrearConductaEstudianteCommand request, CancellationToken cancellationToken)
+
+    public EditarConductaEstudianteCommandHanlder(IApplicationDbcontexts  context, ILogger<EditarConductaEstudianteCommandHanlder> logger, IMapper mapper)
+    {
+        _context = context;
+        _logger = logger;
+        _mapper = mapper;
+    }
+
+    public async Task<ConductaEstudianteDto> Handle(EditarConductaEstudianteCommand request, CancellationToken cancellationToken)
         {
             _logger.LogDebug("EditarConductaEstudianteCommandHanlder started");
 
@@ -47,6 +55,6 @@ namespace CESDE.ConductaEstudiante.Application.Commands.ConductaEstudiantesC
 
             return resultado;
 
-        }
-    }
+        }  
+}
 
