@@ -34,6 +34,7 @@ namespace CESDE.ConductaEstudiante.Application.Queries.ConductaEstudianteQ
                 PrimerApellido = x.PrimerApellido,
                 SegundoApellido = x.SegundoApellido,
                 ProgramaAcademico = x.ProgramaAcademico,
+                Documento = x.Documento,
                 Observaciones = x.Observaciones,
                 FechaNovedad = x.FechaNovedad,
 
