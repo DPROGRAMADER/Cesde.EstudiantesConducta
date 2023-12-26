@@ -15,8 +15,5 @@ namespace CESDE.ConductaEstudiante.Application
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
             return services;
         }
-
-
-
     }
 }
