@@ -1,4 +1,4 @@
-export interface ConductaEstudiante {
+export interface conductaEstudiante {
     Id: number;
     Documento: string;
     PrimerNombre: string;
