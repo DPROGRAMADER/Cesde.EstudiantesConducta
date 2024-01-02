@@ -6,7 +6,7 @@ import { ConductaEstudianteService } from 'src/app/administrative/services/condu
 @Component({
   selector: 'app-administrar-conducta-estudiante',
   templateUrl: './administrar-conducta-estudiante.component.html',
-  styleUrls: ['./administrar-conducta-estudiante.component.css']
+  styleUrls: ['./administrar-conducta-estudiante.component.css'
 })
 export class AdministrarConductaEstudianteComponent {
 

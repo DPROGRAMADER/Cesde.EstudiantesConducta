@@ -66,10 +66,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Cesde.EstudiantesConducta.UI:build:production"
+              "buildTarget": "Cesde.EstudiantesConducta.UI:build:production"
             },
             "development": {
-              "browserTarget": "Cesde.EstudiantesConducta.UI:build:development"
+              "buildTarget": "Cesde.EstudiantesConducta.UI:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -77,7 +77,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Cesde.EstudiantesConducta.UI:build"
+            "buildTarget": "Cesde.EstudiantesConducta.UI:build"
           }
         },
         "test": {
