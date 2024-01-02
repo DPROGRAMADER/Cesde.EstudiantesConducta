@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
 import { ConfirmationService, } from 'primeng/api';
 import { conductaEstudiante } from 'src/app/administrative/models/conductaEstudiante';
@@ -16,13 +17,14 @@ export class ListarConductaEstudianteComponent {
   constructor(
     private _ConductaEstudianteService: ConductaEstudianteService,
     private _messageService: MessageService,
+    private router: Router,
     private _confirmationService: ConfirmationService
   ) { }
 
   ngOnInit() {
 
   }
-//Listar Conducta estudiante
+  //Listar Conducta estudiante
   ListarConductaEstudiante() {
     this._ConductaEstudianteService.getEstudianteController().subscribe({
       next: (data) => {
@@ -30,7 +32,7 @@ export class ListarConductaEstudianteComponent {
       }
     })
   }
- //Eliminar Conducta estudiante
+  //Eliminar Conducta estudiante
   EliminarConductaEstudiante(id: number, event: Event) {
     this._confirmationService.confirm({
       target: event.target!,
@@ -69,4 +71,17 @@ export class ListarConductaEstudianteComponent {
       reject: () => { }
     })
   }
+
+  nuevaConductaEstudiante() {
+    this.router.navigate(['conductaEstudiante', 'new'])
+  }
+  editarConductaEstudiante(id: number) {
+    this.router.navigate([`administrar-conductaestudiante/${id}`]);
+  }
 }
+
+
+
+
+
+
