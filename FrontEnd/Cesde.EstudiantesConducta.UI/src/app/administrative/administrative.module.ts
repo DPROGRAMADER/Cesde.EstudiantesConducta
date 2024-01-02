@@ -4,7 +4,6 @@ import { AdministrarConductaEstudianteComponent } from './components/conductaest
 import { ListarConductaEstudianteComponent } from './components/conductaestudiante/listar-conducta-estudiante/listar-conducta-estudiante.component';
 
 
-
 @NgModule({
   declarations: [
     AdministrarConductaEstudianteComponent,

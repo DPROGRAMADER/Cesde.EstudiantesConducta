@@ -6,10 +6,12 @@ describe('AdministrarConductaEstudianteComponent', () => {
   let component: AdministrarConductaEstudianteComponent;
   let fixture: ComponentFixture<AdministrarConductaEstudianteComponent>;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [AdministrarConductaEstudianteComponent]
-    });
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [AdministrarConductaEstudianteComponent]
+    })
+    .compileComponents();
+    
     fixture = TestBed.createComponent(AdministrarConductaEstudianteComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
