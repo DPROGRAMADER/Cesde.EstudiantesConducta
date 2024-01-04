@@ -1,0 +1,54 @@
+<p-toast position="top-right"></p-toast>
+<p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle"></p-confirmDialog>
+<div class="container">
+    <div class="btn-new-config mt-4 mb-3">
+        <h6 class="titulo">
+            <b>REGISTRO CONDUCTA ESTUDIANTE</b>
+        </h6>
+        <p-button type="button" [routerLink]="['/Crear-conducta-estudiante', 0]" class="btn">
+            Nuevo Registro
+        </p-button>
+    </div>
+    <hr>
+    <br>
+
+    <div class="tabla">
+        <p-table #dt1 [value]="conductaestudiante" [globalFilterFields]="['']" [paginator]="true" [rows]="rowsPerPage"
+            [scrollable]="true" [showCurrentPageReport]="true" [tableStyle]="{ 'min-width': '50rem' }"
+            styleClass="p-datatable-gridlines p-datatable-sm"
+            currentPageReportTemplate=" página  {first}  registros  {totalRecords}">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>Documento</th>
+                    <th>Nombre Completo</th>
+                    <th>Programa Academico</th>
+                    <th>Fecha Novedad</th>
+                    <th>Observacion</th>
+                    <th>Acciones</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-item>
+                <tr>
+                    <td>{{ item.documento }}</td>
+                    <td>{{ item.nombreCompleto}}</td>
+                    <td>{{ item.programaAcademico}}</td>
+                    <td>{{ item.fechaNovedad}}</td>
+                    <td>{{ item.observaciones}}</td>
+                    <td>
+                        <div class="image-container">
+                            <img src="/assets/img/iconoIMG.png" alt="Imagen con Icono">
+                            <i class="bi bi-pencil-square" pTooltip="Editar" tooltipPosition="right"
+                                (click)=" editarConductaEstudiante(item.id)"></i>
+                        </div>
+                        <div class="image-container">
+                            <img src="/assets/img/iconoIMG.png" alt="Imagen con Icono">
+                            <i class="bi bi-trash3-fill" pTooltip="Eliminar" tooltipPosition="right"
+                                (click)="EliminarConductaEstudiante(item.id, $event)"></i>
+                        </div>
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+      
+</div>

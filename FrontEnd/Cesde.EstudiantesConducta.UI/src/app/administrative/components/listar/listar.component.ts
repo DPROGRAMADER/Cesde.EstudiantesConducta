@@ -1,18 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { conductaEstudiante } from '../../models/conductaEstudiante';
+import { ConductaEstudianteService } from '../../services/conducta-estudiante.service';
+import { ConfirmationService, MessageService } from 'primeng/api';
 import { Router } from '@angular/router';
-import { MessageService } from 'primeng/api';
-import { ConfirmationService, } from 'primeng/api';
-import { conductaEstudiante } from 'src/app/administrative/models/conductaEstudiante';
-import { ConductaEstudianteService } from 'src/app/administrative/services/conducta-estudiante.service';
 
 @Component({
-  selector: 'app-listar-conducta-estudiante',
-  templateUrl: './listar-conducta-estudiante.component.html',
-  styleUrl: './listar-conducta-estudiante.component.css'
+  selector: 'app-listar',
+  templateUrl: './listar.component.html',
+  styleUrl: './listar.component.css'
 })
-export class ListarConductaEstudianteComponent {
-
+export class ListarComponent implements OnInit {
   conductaestudiante: conductaEstudiante[] = [];
+  rowsPerPage = 5
 
   constructor(
     private _ConductaEstudianteService: ConductaEstudianteService,
@@ -21,9 +20,7 @@ export class ListarConductaEstudianteComponent {
     private _confirmationService: ConfirmationService
   ) { }
 
-  ngOnInit() {
-
-  }
+ 
   //Listar Conducta estudiante
   ListarConductaEstudiante() {
     this._ConductaEstudianteService.getEstudianteController().subscribe({
@@ -78,10 +75,8 @@ export class ListarConductaEstudianteComponent {
   editarConductaEstudiante(id: number) {
     this.router.navigate([`administrar-conductaestudiante/${id}`]);
   }
+  ngOnInit(): void {
+    this.ListarConductaEstudiante();
+  }
+
 }
-
-
-
-
-
-

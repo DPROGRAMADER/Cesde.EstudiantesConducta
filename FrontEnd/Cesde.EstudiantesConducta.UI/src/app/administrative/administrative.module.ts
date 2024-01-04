@@ -1,16 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AdministrarConductaEstudianteComponent } from './components/conductaestudiante/administrar-conducta-estudiante/administrar-conducta-estudiante.component';
-import { ListarConductaEstudianteComponent } from './components/conductaestudiante/listar-conducta-estudiante/listar-conducta-estudiante.component';
-
+import { TableModule } from 'primeng/table';
+import { ToastModule } from 'primeng/toast';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { ButtonModule } from 'primeng/button';
+import { RouterModule } from '@angular/router';
+import { AdministrativeRoutingModule } from './administrative-routing.module';
+import { ListarComponent } from './components/listar/listar.component';
 
 @NgModule({
   declarations: [
-    AdministrarConductaEstudianteComponent,
-    ListarConductaEstudianteComponent
+    ListarComponent
   ],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    TableModule,
+    ToastModule,
+    ConfirmDialogModule,
+    ButtonModule,
+    RouterModule
+  ],
+  exports: [AdministrativeRoutingModule]
 })
 export class AdministrativeModule { }

@@ -9,22 +9,25 @@ import { Observable, } from 'rxjs';
 })
 export class ConductaEstudianteService {
 
-  urlApi: string = ""
+  baseUrlApi: string = ""
 
   constructor(private http: HttpClient) {
-    this.urlApi = `${environment.baseUrlApi}/ EstudianteController`
+    this.baseUrlApi = `${environment.baseUrlApi}/ EstudianteController`
   }
 
   postEstudianteController(from: conductaEstudiante): Observable<conductaEstudiante> {
-    return this.http.post<conductaEstudiante>(`${this.urlApi}/CrearConductaEstudiante`, from)
+    return this.http.post<conductaEstudiante>(`${this.baseUrlApi}/CrearConductaEstudiante`, from)
   }
   putEstudianteController(from: conductaEstudiante): Observable<conductaEstudiante> {
-    return this.http.put<conductaEstudiante>(`${this.urlApi}/EditarConductaEstudiante`, from)
+    return this.http.put<conductaEstudiante>(`${this.baseUrlApi}/EditarConductaEstudiante`, from)
   }
   deleteEstudianteController(id: number): Observable<any> {
-    return this.http.delete<conductaEstudiante>(`${this.urlApi}/EliminarConductaEstudiante/${id}`,)
+    return this.http.delete<conductaEstudiante>(`${this.baseUrlApi}/EliminarConductaEstudiante/${id}`,)
   }
   getEstudianteController(): Observable<conductaEstudiante[]> {
-    return this.http.get<conductaEstudiante[]>(`${this.urlApi}/ConsultarConductasEstudiantes`)
+   return this.http.get<conductaEstudiante[]>(
+    `${environment.baseUrlApi}/Estudiante/ConsultarConductasEstudiantes`
+   )
   }
 }
+    

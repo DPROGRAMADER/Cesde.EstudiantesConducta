@@ -1,19 +1,13 @@
 import { NgModule } from '@angular/core';
-import { AdministrarConductaEstudianteComponent } from './components/conductaestudiante/administrar-conducta-estudiante/administrar-conducta-estudiante.component';
-import { ListarConductaEstudianteComponent } from './components/conductaestudiante/listar-conducta-estudiante/listar-conducta-estudiante.component';
 import { RouterModule, Routes } from '@angular/router';
+import { ListarComponent } from './components/listar/listar.component';
 
 const routes: Routes = [
   {
-    path: `listar-conductaestudiante`,
-    component: ListarConductaEstudianteComponent,
-
+    path: 'listar',
+    component: ListarComponent
   },
-  {
-    path: `administrar-conductaestudiante`,
-    component: AdministrarConductaEstudianteComponent,
 
-  }
 ];
 
 @NgModule({
